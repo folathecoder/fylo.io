@@ -197,6 +197,9 @@ nav {
         background-repeat: no-repeat;
         background-size: auto 400px;
     }
+    .hero1 {
+        width: 90%;
+    }
 
     .hero-image img {
         width: 300px;
@@ -207,12 +210,12 @@ nav {
         margin-top: 20px;
     }
     .hero-header h1 {
-        font-size: 1.3rem;
-        line-height: 1.8rem;
+        font-size: 1.5rem;
+        line-height: 2.1rem;
         font-weight: 700px;
     }
     .hero-sub-heading p {
-        font-size: 0.8rem;
+        font-size: 1rem;
         font-weight: 400px;
         margin: 0px 0px;
         line-height: 1.8;
