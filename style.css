@@ -52,6 +52,7 @@ nav {
     background-image: url(images/bg-curvy-desktop.svg);
     background-repeat: no-repeat;
     background-position: bottom;
+    background-size: contain;
     width: 100%;
     min-height: 100px;
     background-color: hsl(217, 28%, 15%);
