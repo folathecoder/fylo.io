@@ -170,17 +170,27 @@ nav {
 .container3 {
     /* background-color: yellow; */
     width: 90%;
-    margin: 100px auto;
+    margin: 80px auto;
+    padding-top: 50px;
     display: grid;
     grid-gap: 40px;
     grid-template-columns: repeat(auto-fill, minmax(400px,1fr));
     grid-template-rows: 260px;
     grid-auto-rows: 260px;
+    background-image: url(images/bg-quotes.png);
+    background-repeat: no-repeat;
+    background-position: 0px 10px;
 }
 .test {
+    background-color:hsl(217, 27%, 15%);
     padding: 30px 30px;
-    box-shadow: 0px 0px 4px hsl(218, 31%, 5%);
+    box-shadow: 0px 0px 4px hsl(218, 31%, 10%);
 }
+/* .test1 {
+    background-image: url(images/bg-quotes.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+} */
 .content p {
     font-size: 1rem;
     line-height: 1.5rem;
@@ -397,8 +407,8 @@ nav {
     .container4 {
         margin-top: 0px;
     }
-    .hero3 img {7
-        width: 320px;
+    .hero3 img {
+        width: 300px;
         height: auto;
     }
     .hero4 {
