@@ -174,8 +174,8 @@ nav {
     display: grid;
     grid-gap: 40px;
     grid-template-columns: repeat(auto-fill, minmax(400px,1fr));
-    grid-template-rows: 250px;
-    grid-auto-rows: 250px;
+    grid-template-rows: 260px;
+    grid-auto-rows: 260px;
 }
 .test {
     padding: 30px 30px;
@@ -184,6 +184,7 @@ nav {
 .content p {
     font-size: 1rem;
     line-height: 1.5rem;
+    height: 110px;
     color: white;
     font-family: 'Open Sans', sans-serif;
 
@@ -191,6 +192,7 @@ nav {
 .author {
     display: flex;
     align-items: center;
+    /* margin: 30px 0px; */
 }
 .author-image {
 
@@ -219,6 +221,16 @@ nav {
     color: rgb(255, 255, 255);
     font-family: 'Open Sans', sans-serif;
     font-size: 0.65rem;
+}
+.attribution {
+    color: rgba(255, 255, 255, 0.719);
+    text-align: center;
+}
+.attribution a {
+    color: white;
+}
+.attribution a:hover {
+    color:  hsl(176, 68%, 64%)
 }
 
 
@@ -385,7 +397,7 @@ nav {
     .container4 {
         margin-top: 0px;
     }
-    .hero3 img {
+    .hero3 img {7
         width: 320px;
         height: auto;
     }
@@ -400,5 +412,23 @@ nav {
         font-size: 1rem;
         margin-right: 0px;
     }
+    .container3 {
+        grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+        grid-template-rows: 260px;
+        grid-auto-rows: 260px;
+    }
+    .author {
+        margin-top: 20px;
+    }
 }
  
+@media (max-width: 340px) {
+    .container3 {
+        grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+        grid-template-rows: 300px;
+        grid-auto-rows: repeat (autofit, 1fr)
+    }
+    .author {
+        margin-top: 50px;
+    }
+}
