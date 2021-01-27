@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "style.scss",
+        "base/base-dir.scss",
+        "layouts/layouts-dir.scss",
+        "modules/modules-dir.scss",
+        "plugins/plugins-dir.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}
