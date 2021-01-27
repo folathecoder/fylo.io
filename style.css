@@ -1,1 +1,105 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+h1 h2 h3 h4 h5 h6 {
+  font-family: "Raleway", sans-serif;
+  color: white;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  position: relative;
+  background-color: #9e9d9d;
+}
+
+header {
+  background: #181f2a;
+  min-height: 70px;
+  width: 100%;
+}
+
+.header-container {
+  background: #181f2a;
+  width: 90%;
+  min-height: 70px;
+  margin: 0px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.logo img {
+  max-width: 100px;
+  height: auto;
+}
+
+nav {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+
+nav ul {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 50px;
+}
+
+nav li p:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #65e2d9;
+}
+
+main {
+  background: orange;
+  max-width: 100%;
+  min-height: 100vh;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=style.css.map */
