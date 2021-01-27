@@ -1,3 +1,36 @@
+//Media Queries
+
+@mixin media-query ($size) {
+
+    @if $size == mega-desktop {
+        @media screen and (min-width: 1400px) {
+            @content;
+        }
+    }
+    @if $size == desktop {
+        @media screen and (min-width: 1200px) {
+            @content;
+        }
+    }
+    @if $size == tablet {
+        @media screen and (min-width: 992px) {
+            @content;
+        }
+    }
+    @if $size == mini-tablet {
+        @media screen and (min-width: 786px) {
+            @content;
+        }
+    }
+    @if $size == mobile {
+        @media screen and (min-width: 576px) {
+            @content;
+        }
+    }
+
+
+} 
+
 //font family
 
 $font-heading: 'Raleway', sans-serif;
@@ -60,6 +93,7 @@ header {
     background: $color-main-background;
     min-height: 70px;
     width: 100%;
+    position: fixed;
 }
 .header-container {
     background: $color-main-background;
@@ -102,6 +136,11 @@ main {
     background:orange;
     max-width: 100%;
     min-height: 100vh;
+}
+
+.hero1 {
+    width: 
+
 }
 
 
