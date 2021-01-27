@@ -1,24 +1,60 @@
-h1 h2 h3 h4 h5 h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
   color: white;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 700px) {
+  h1 {
+    font-size: 2.3rem;
+    line-height: 2.5rem;
+  }
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 p {
   font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
+  line-height: 1.2rem;
   color: white;
+}
+
+@media screen and (min-width: 700px) {
+  p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 
 a {
   text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+}
+
+@media screen and (min-width: 700px) {
+  a {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.btn {
+  background-color: #339ecc;
+  padding: 15px 100px;
+  border-radius: 50px;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #65e2d9;
 }
 
 html {
@@ -31,13 +67,13 @@ body {
 }
 
 header {
-  background: #181f2a;
+  background: #1c2431;
   min-height: 70px;
   width: 100%;
 }
 
 .header-container {
-  background: #181f2a;
+  background: #1c2431;
   width: 90%;
   min-height: 70px;
   margin: 0px auto;
@@ -79,7 +115,19 @@ nav ul {
 
 nav li {
   display: inline-block;
-  margin-left: 50px;
+  margin-left: 20px;
+}
+
+@media screen and (min-width: 700px) {
+  nav li {
+    margin-left: 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  nav li {
+    margin-left: 50px;
+  }
 }
 
 nav li p:hover {
@@ -89,9 +137,106 @@ nav li p:hover {
 }
 
 main {
-  background: orange;
+  background-color: #1c2431;
   max-width: 100%;
   min-height: 100vh;
+}
+
+.hero1 {
+  max-width: 100%;
+  min-height: 350px;
+  display: block;
+  text-align: center;
+  padding-bottom: 50px;
+  background: url(images/bg-curvy-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 800px auto;
+  background-position: bottom;
+  background-color: #1c2431;
+}
+
+@media screen and (min-width: 700px) {
+  .hero1 {
+    background: url(images/bg-curvy-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 1000px auto contain;
+    background-position: bottom;
+  }
+}
+
+.hero1 img {
+  width: 80%;
+  height: auto;
+  padding: 50px 0px;
+}
+
+@media screen and (min-width: 700px) {
+  .hero1 img {
+    width: 70%;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .hero1 img {
+    width: 60%;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero1 img {
+    width: 50%;
+    height: auto;
+  }
+}
+
+.hero1 h1 {
+  padding: 0px 10px;
+}
+
+@media screen and (min-width: 700px) {
+  .hero1 h1 {
+    padding: 0px 90px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .hero1 h1 {
+    padding: 0px 170px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero1 h1 {
+    padding: 0px 300px;
+  }
+}
+
+.hero1 p {
+  padding: 20px 10px 40px 10px;
+}
+
+@media screen and (min-width: 700px) {
+  .hero1 p {
+    padding: 20px 100px 40px 100px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .hero1 p {
+    padding: 20px 160px 40px 160px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero1 p {
+    padding: 20px 300px 40px 300px;
+  }
+}
+
+.hero1 a {
+  margin-bottom: 100px;
 }
 
 .attribution {
