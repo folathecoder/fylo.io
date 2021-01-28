@@ -2,16 +2,6 @@
 
 @mixin media-query ($size) {
 
-    // @if $size == mega-desktop {
-    //     @media screen and (min-width: 1400px) {
-    //         @content;
-    //     }
-    // }
-    @if $size == desktop {
-        @media screen and (max-width: 1200px) {
-            @content;
-        }
-    }
     @if $size == tablet {
         @media screen and (max-width: 992px) {
             @content;
@@ -27,8 +17,6 @@
             @content;
         }
     }
-
-
 } 
 
 //font family
@@ -62,25 +50,58 @@ h1, h2, h3, h4, h5, h6 {
     color: $color-neutral-primary;
 }
 h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    line-height: 2.5rem;
     font-weight: 700;
+
+    @include media-query(tablet) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    @include media-query(mobile) {
+        font-size: 1.7rem;
+        line-height: 2.2rem;
+    }
 }
 h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    font-weight: 700;
+}
+h3 {
+    font-size: 1.4rem;
+    line-height: 2.0rem;
+    font-weight: 700;
 
+    @include media-query(tablet) {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+    @include media-query(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
 }
 p {
     font-family: $font-body;
-    font-size: 0.875rem;
-    line-height: 1.2rem;
+    font-size: 1rem;
+    line-height: 1.7rem;
     color: $color-neutral-primary;
+    
+    @include media-query(tablet){
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+    }
+    @include media-query(mobile){
+        font-size: 0.875rem;
+        line-height: 1.3rem;
+    }
 }
 a {
     text-decoration: none;
     font-family: $font-body;
     font-size: 0.875rem;
 }
-
 
 // Genereal Component 
 
@@ -94,8 +115,6 @@ a {
         background-color: $color-cta-bg1;
     }
 }
-
-
 
 //Base styling 
 
@@ -133,28 +152,137 @@ header {
 }
 nav {
     flex: 3;
-
     ul {
         height: 100%;
         width: 100%;
         display: flex;
         justify-content: flex-end;
-
     }
-    
     li {
         display: inline-block;
-        margin-left: 20px;  
+        margin-left: 40px;  
 
+        @include media-query(mini-tablet) {
+            margin-left: 30px;  
+        }
+        @include media-query(mobile) {
+            margin-left: 20px;  
+        }
         & p:hover {
             transition: 0.5s;
             color: $color-cta-bg1;
         }
     }
 }
+main {
+    max-width: 100%;
+    min-height: 100vh;
+    background-color: rgb(107, 107, 104);
+}
+.hero1-container {
+    max-width: 100%;
+    min-height: 300px;
+    background-color: $color-intro-email;
+    background-image: url(images/bg-curvy-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
 
+    @include media-query(mobile) {
+        background-image: url(images/bg-curvy-mobile.svg);
+        background-size: 700px;
+    }
+}
+.hero1 {
+    display: block;
+    max-width: 700px;
+    min-height: 300px;
+    margin: 0px auto;
+    padding: 50px 0px;
+    text-align: center;
+    img {
+        width: 80%;
+        height: auto;
+    }
+    h1 {
+        padding: 20px 10px;
+    }
+    p {
+        padding: 0px 100px 40px 100px;
 
+        @include media-query(tablet) {
+            padding: 0px 70px 40px 70px;
+        }
+        @include media-query(mobile) {
+            padding: 0px 20px 40px 20px;
+        }
+    }
+}
+.feature-container {
+    max-width: 100%;
+    background-color: hsl(218, 28%, 13%);
+}
+.feature-area {
+    background-color: hsl(218, 28%, 13%);
+    margin: 0px auto;
+    max-width: 800px;
+    min-height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0px;
+}
+.feature {
+    text-align: center;
+    min-height: 200px;
+    padding: 40px 20px;
 
+    @include media-query(mobile) {
+        padding: 20px 20px;
+    }
+
+    h3 {
+        padding: 10px 0px;
+    }
+
+    &_card1, &_card2, &_card3, &_card4 {
+        flex: 1 1 250px;
+    }
+}
+
+.hero2-container {
+    background-color: hsl(218, 28%, 13%);
+    min-height: 300px;
+    max-width: 100%;
+}
+.hero2 {
+    background-color: hsl(218, 28%, 13%);
+    width: 1000px;
+    min-height: 500px;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+
+    &_img {
+        flex: 1 500px;
+
+        img {
+            width: 100%;
+        }
+    }
+    &_content {
+        flex: 1 500px;
+        padding: 20px 40px;
+
+        p:first-of-type {
+            padding: 20px 0px;
+        }
+        a {
+            color: $color-cta-bg2;
+            padding-bottom: 5px;
+            border-bottom: 2px solid $color-cta-bg2;
+        }
+    }
+}
 
 
 
