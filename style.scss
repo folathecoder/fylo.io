@@ -65,8 +65,17 @@ h1 {
 }
 h2 {
     font-size: 2rem;
-    line-height: 2.3rem;
+    line-height: 2.2rem;
     font-weight: 700;
+
+    @include media-query(tablet) {
+        font-size: 1.8rem;
+        line-height: 2rem;
+    }
+    @include media-query(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
 }
 h3 {
     font-size: 1.4rem;
@@ -256,37 +265,125 @@ main {
 }
 .hero2 {
     background-color: hsl(218, 28%, 13%);
-    width: 1000px;
+    max-width: 1000px;
     min-height: 500px;
     margin: 0px auto;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 
     &_img {
-        flex: 1 500px;
+        flex: 1 1 400px;
+        padding: 50px 10px;
+        text-align: center;
 
         img {
             width: 100%;
+
+            @include media-query(tablet) {
+                width: 80%;
+            }
+            @include media-query(mobile) {
+                width: 100%;
+            }
         }
     }
     &_content {
-        flex: 1 500px;
-        padding: 20px 40px;
+        flex: 1 1 400px;
+        padding: 20px 50px;
+
+        @include media-query(tablet) {
+            padding: 20px 20px;
+        }
 
         p:first-of-type {
             padding: 20px 0px;
         }
         a {
             color: $color-cta-bg2;
+            line-height: 40px;
             padding-bottom: 5px;
             border-bottom: 2px solid $color-cta-bg2;
+
+            &:hover {
+                color: $color-cta-bg1;
+                border-color: $color-cta-bg1;
+            }
         }
     }
 }
 
+.testimonial-container {
+    max-width: 100%;
+    min-height: 30px;
+    background-color: $color-main-background;
+}
+.testimonial-area {
+    max-width: 1100px;
+    min-height: 100px;
+    background-color: $color-main-background;
+    margin: 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.testimonial {
+//    width: 320px;
+    min-height: 100px;
+    background-color: $color-testimonial-bg;
+    padding: 20px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px $color-main-background;
+
+    &_card1, &_card2, &_card3 {
+        flex: 1 1 300px;
+    }
+
+    &_content {
+
+        p:first-child {
+            font-size: 5rem;
+        }
+    }
+
+    &_profile {
+
+        img {
+            width: 60%;
+            border-radius: 50px;
+        }
 
 
+        display: flex;
+        align-items: center;
+        padding: 10px 0px;
+    }
+}
 
+.testimonial {
+    &_image {
+        flex: 1;
+    }
+    &_name-title {
+        flex: 5;
+        display: block;
+        margin-left: -10px;
+
+        P:first-of-type {
+            font-weight: 800;
+            font-size: 0.85rem;;
+        }
+
+        P:last-of-type {
+            font-weight: 200;
+            font-size: 0.75rem;
+            margin-top: -5px;
+        }
+    }
+}
 
 
 
