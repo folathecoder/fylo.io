@@ -107,7 +107,7 @@ html {
 
 body {
   position: relative;
-  background-color: #9e9d9d;
+  background-color: #181f2a;
 }
 
 header {
@@ -441,16 +441,17 @@ main {
 
 .subscription-container {
   max-width: 100%;
-  background-color: red;
-  height: 400px;
+  background-color: #181f2a;
+  min-height: 100px;
   padding: 0px 20px;
+  position: relative;
 }
 
 .subscription {
-  background-color: black;
+  background-color: #1c2431;
   max-width: 700px;
   min-height: 200px;
-  margin: 0px auto;
+  margin: 0px auto 0px auto;
   text-align: center;
   padding: 30px;
   border-radius: 5px;
@@ -465,9 +466,30 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
+}
+
+@media screen and (max-width: 556px) {
+  .subscription p {
+    margin: 20px 0px;
+  }
+}
+
+.form-container {
+  width: 100%;
+  min-height: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 form {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   display: inline-block;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -482,19 +504,28 @@ form {
 }
 
 form input:first-of-type {
-  background-color: yellow;
+  background-color: white;
   -webkit-box-flex: 2;
       -ms-flex: 2 1 300px;
           flex: 2 1 300px;
   margin-top: 10px;
+  padding-left: 20px;
+  border: 3px solid white;
 }
 
 form input:last-of-type {
-  background-color: #9b9b5a;
+  background-color: #339ecc;
+  border: 1px solid #339ecc;
+  color: white;
+  font-weight: 800;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 150px;
           flex: 1 1 150px;
   margin-top: 10px;
+}
+
+form input:last-of-type:hover {
+  background-color: #65e2d9;
 }
 
 .form_text-area {
@@ -505,7 +536,112 @@ form input:last-of-type {
 .form_button {
   height: 50px;
   border-radius: 50px;
-  margin-left: 0px;
+  margin-left: 15px;
+}
+
+@media screen and (max-width: 556px) {
+  .form_button {
+    margin-left: 0px;
+  }
+}
+
+footer {
+  background-color: #0b1523;
+  min-height: 200px;
+  max-width: 100%;
+  padding-top: 200px;
+  margin-top: -100px;
+}
+
+.footer_container1 {
+  background-color: #0b1523;
+  height: 70px;
+  width: 90%;
+  margin: 0px auto;
+}
+
+.footer_container2 {
+  background-color: #fff;
+  height: 200px;
+  width: 90%;
+  margin: 0px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.foot {
+  background-color: #0b1523;
+  min-height: 100px;
+  padding: 20px 10px;
+}
+
+.foot_part1 {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.foot_part1 img {
+  margin: 5px 20px 0px 0px;
+}
+
+.foot_part2 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.foot_part2 .telephone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.foot_part2 .telephone img {
+  margin-right: 10px;
+}
+
+.foot_part2 .email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+}
+
+.foot_part2 .email img {
+  width: 12%;
+  height: 12%;
+  margin: 5px 10px 0px 0px;
+}
+
+.foot_part3, .foot_part4 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.foot_part3 a, .foot_part4 a {
+  margin-bottom: 15px;
+  color: white;
+}
+
+.foot_part5 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
 }
 
 .attribution {

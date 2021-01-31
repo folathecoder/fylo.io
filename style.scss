@@ -132,7 +132,7 @@ html {
 }
 body {
     position: relative;
-    background-color: rgb(158, 157, 157);
+    background-color: $color-main-background;
 }
 
 
@@ -229,10 +229,10 @@ main {
 }
 .feature-container {
     max-width: 100%;
-    background-color: hsl(218, 28%, 13%);
+    background-color: $color-main-background;
 }
 .feature-area {
-    background-color: hsl(218, 28%, 13%);
+    background-color: $color-main-background;
     margin: 0px auto;
     max-width: 800px;
     min-height: 100px;
@@ -259,12 +259,12 @@ main {
 }
 
 .hero2-container {
-    background-color: hsl(218, 28%, 13%);
+    background-color: $color-main-background;
     min-height: 300px;
     max-width: 100%;
 }
 .hero2 {
-    background-color: hsl(218, 28%, 13%);
+    background-color: $color-main-background;
     max-width: 1000px;
     min-height: 500px;
     margin: 0px auto;
@@ -317,7 +317,7 @@ main {
     max-width: 100%;
     min-height: 10px;
     background-color: $color-main-background;
-    padding: 50px 0px;
+    padding: 50px 0px ;
 }
 .testimonial-area {
     max-width: 1100px;
@@ -392,15 +392,18 @@ main {
 
 .subscription-container {
     max-width: 100%;
-    background-color: red;
-    height: 400px;
+    background-color: $color-main-background;
+    min-height: 100px;
     padding: 0px 20px;
+    // margin-bottom: -100px;
+    position: relative;
+    // margin-top: 100px;
 }
 .subscription {
-    background-color: black;
+    background-color: $color-intro-email;
     max-width: 700px;
     min-height: 200px;
-    margin: 0px auto;
+    margin: 0px auto 0px auto;
     text-align: center;
     padding: 30px;
     border-radius: 5px;
@@ -408,9 +411,24 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
+
+    @include media-query(mobile) {
+        p {
+            margin: 20px 0px;
+        }
+    }
 }
 
+.form-container {
+    width: 100%;
+    min-height: 10px;
+    display: flex;
+    justify-content: center;
+
+}
 form {
+    flex: 1;
     display: inline-block;
     display: flex;
     flex-wrap: wrap;
@@ -419,15 +437,24 @@ form {
     line-height: 40px;
 
     input:first-of-type {
-        background-color: yellow;
+        background-color: $color-neutral-primary;
         flex: 2 1 300px;
         margin-top: 10px;
+        padding-left: 20px;
+        border: 3px solid $color-neutral-primary;
     }
 
     input:last-of-type {
-        background-color: rgb(155, 155, 90);
+        background-color: $color-cta-bg2;
+        border: 1px solid $color-cta-bg2;
+        color: white;
+        font-weight: 800;
         flex: 1 1 150px;
         margin-top: 10px;
+
+        &:hover {
+            background-color: $color-cta-bg1;
+        }
     }
 
 }
@@ -439,7 +466,96 @@ form {
 .form_button {
     height: 50px;
     border-radius: 50px;
-    margin-left: 0px;
+    margin-left: 15px;
+
+    @include media-query(mobile) {
+        margin-left: 0px;
+    }
+}
+
+footer {
+    background-color: $color-footer-bg;
+    min-height: 200px;
+    max-width: 100%;
+    padding-top: 200px;
+    margin-top: -100px
+}
+
+.footer {
+
+    &_container1 {
+        background-color: $color-footer-bg;
+        height: 70px;
+        width: 90%;
+        margin: 0px auto;
+    }
+
+    &_container2 {
+        background-color: #fff;
+        height: 200px;
+        width: 90%;
+        margin: 0px auto;
+        display: flex;
+    }
+}
+
+.foot {
+    background-color: $color-footer-bg;
+    min-height: 100px;
+    padding: 20px 10px;
+
+    &_part1 {
+        flex: 2;
+        // background-color: red;
+        display: flex;
+
+        img {
+            margin: 5px 20px 0px 0px;
+        }
+    }
+
+    &_part2 {
+        flex: 1;
+        // background-color: rgb(128, 77, 77);
+
+        .telephone {
+            display: flex;
+
+            img {
+                margin-right: 10px;
+            }
+        }
+
+        .email {
+            display: flex;
+            margin-top: 20px;
+
+            img {
+                width: 12%;
+                height: 12%;
+                margin: 5px 10px 0px 0px;
+            }
+        }
+    }
+
+    &_part3, &_part4 {
+        flex: 1;
+        // background-color: rgb(141, 137, 185);
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        a {
+            margin-bottom: 15px;
+            color: white; 
+        }
+    }
+
+    &_part5 {
+        flex: 1;
+        // background-color: rgb(173, 158, 70);
+        text-align: center;
+    }
 }
 
 
