@@ -111,6 +111,15 @@ a {
     font-family: $font-body;
     font-size: 0.875rem;
 }
+i {
+    font-size: 2rem;
+    margin-right: 20px;
+    color: $color-neutral-primary;
+
+    &:hover {
+        color: $color-cta-bg1;
+    }
+}
 
 // Genereal Component 
 
@@ -309,8 +318,11 @@ main {
                 color: $color-cta-bg1;
                 border-color: $color-cta-bg1;
             }
+
         }
     }
+
+
 }
 
 .testimonial-container {
@@ -318,6 +330,10 @@ main {
     min-height: 10px;
     background-color: $color-main-background;
     padding: 50px 0px ;
+
+    @include media-query(mobile) {
+        padding: 0px;
+    }
 }
 .testimonial-area {
     max-width: 1100px;
@@ -393,11 +409,9 @@ main {
 .subscription-container {
     max-width: 100%;
     background-color: $color-main-background;
-    min-height: 100px;
+    min-height: 0px;
     padding: 0px 20px;
-    // margin-bottom: -100px;
     position: relative;
-    // margin-top: 100px;
 }
 .subscription {
     background-color: $color-intro-email;
@@ -412,6 +426,7 @@ main {
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+    transform: translateY(150px);
 
     @include media-query(mobile) {
         p {
@@ -478,7 +493,6 @@ footer {
     min-height: 200px;
     max-width: 100%;
     padding-top: 200px;
-    margin-top: -100px
 }
 
 .footer {
@@ -492,10 +506,11 @@ footer {
 
     &_container2 {
         background-color: #fff;
-        height: 200px;
+        min-height: 200px;
         width: 90%;
         margin: 0px auto;
         display: flex;
+        flex-wrap: wrap;
     }
 }
 
@@ -505,9 +520,13 @@ footer {
     padding: 20px 10px;
 
     &_part1 {
-        flex: 2;
+        flex: 3 1;
         // background-color: red;
         display: flex;
+
+        @include media-query(tablet) {
+            flex: 2 1 600px;
+        }
 
         img {
             margin: 5px 20px 0px 0px;
@@ -515,8 +534,12 @@ footer {
     }
 
     &_part2 {
-        flex: 1;
+        flex: 2 1;
         // background-color: rgb(128, 77, 77);
+
+        @include media-query(mobile) {
+            flex: 1 1 300px;
+        }
 
         .telephone {
             display: flex;
@@ -531,19 +554,24 @@ footer {
             margin-top: 20px;
 
             img {
-                width: 12%;
-                height: 12%;
+                width: 26px;
+                height: auto;
                 margin: 5px 10px 0px 0px;
             }
         }
     }
 
     &_part3, &_part4 {
-        flex: 1;
+        flex: 1 1;
         // background-color: rgb(141, 137, 185);
         display: flex;
         flex-direction: column;
-        text-align: center;
+        text-align: left;
+
+        @include media-query(mobile) {
+            flex: 1 1 300px;
+            text-align: left;
+        }
 
         a {
             margin-bottom: 15px;
@@ -552,9 +580,13 @@ footer {
     }
 
     &_part5 {
-        flex: 1;
+        flex: 2 1;
         // background-color: rgb(173, 158, 70);
         text-align: center;
+        @include media-query(mobile) {
+            flex: 1 1 300px;
+            text-align: left;
+        }
     }
 }
 
@@ -564,6 +596,7 @@ footer {
 .attribution {
     font-size: 11px;
     text-align: center;
+    padding: 0px 10px;
 }
 
 .attribution a {

@@ -90,6 +90,16 @@ a {
   font-size: 0.875rem;
 }
 
+i {
+  font-size: 2rem;
+  margin-right: 20px;
+  color: white;
+}
+
+i:hover {
+  color: #65e2d9;
+}
+
 .btn {
   background-color: #339ecc;
   padding: 15px 100px;
@@ -358,6 +368,12 @@ main {
   padding: 50px 0px;
 }
 
+@media screen and (max-width: 556px) {
+  .testimonial-container {
+    padding: 0px;
+  }
+}
+
 .testimonial-area {
   max-width: 1100px;
   min-height: 100px;
@@ -442,7 +458,7 @@ main {
 .subscription-container {
   max-width: 100%;
   background-color: #181f2a;
-  min-height: 100px;
+  min-height: 0px;
   padding: 0px 20px;
   position: relative;
 }
@@ -467,6 +483,8 @@ main {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
+  -webkit-transform: translateY(150px);
+          transform: translateY(150px);
 }
 
 @media screen and (max-width: 556px) {
@@ -550,7 +568,6 @@ footer {
   min-height: 200px;
   max-width: 100%;
   padding-top: 200px;
-  margin-top: -100px;
 }
 
 .footer_container1 {
@@ -562,12 +579,14 @@ footer {
 
 .footer_container2 {
   background-color: #fff;
-  height: 200px;
+  min-height: 200px;
   width: 90%;
   margin: 0px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .foot {
@@ -577,12 +596,20 @@ footer {
 }
 
 .foot_part1 {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+  -webkit-box-flex: 3;
+      -ms-flex: 3 1;
+          flex: 3 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (max-width: 992px) {
+  .foot_part1 {
+    -webkit-box-flex: 2;
+        -ms-flex: 2 1 600px;
+            flex: 2 1 600px;
+  }
 }
 
 .foot_part1 img {
@@ -590,9 +617,17 @@ footer {
 }
 
 .foot_part2 {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1;
+          flex: 2 1;
+}
+
+@media screen and (max-width: 556px) {
+  .foot_part2 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 300px;
+            flex: 1 1 300px;
+  }
 }
 
 .foot_part2 .telephone {
@@ -613,15 +648,15 @@ footer {
 }
 
 .foot_part2 .email img {
-  width: 12%;
-  height: 12%;
+  width: 26px;
+  height: auto;
   margin: 5px 10px 0px 0px;
 }
 
 .foot_part3, .foot_part4 {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -629,7 +664,16 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  text-align: center;
+  text-align: left;
+}
+
+@media screen and (max-width: 556px) {
+  .foot_part3, .foot_part4 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 300px;
+            flex: 1 1 300px;
+    text-align: left;
+  }
 }
 
 .foot_part3 a, .foot_part4 a {
@@ -638,15 +682,25 @@ footer {
 }
 
 .foot_part5 {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1;
+          flex: 2 1;
   text-align: center;
+}
+
+@media screen and (max-width: 556px) {
+  .foot_part5 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 300px;
+            flex: 1 1 300px;
+    text-align: left;
+  }
 }
 
 .attribution {
   font-size: 11px;
   text-align: center;
+  padding: 0px 10px;
 }
 
 .attribution a {
