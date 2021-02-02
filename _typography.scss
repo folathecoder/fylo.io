@@ -1,0 +1,77 @@
+//Typography 
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-heading;
+    color: $color-neutral-primary;
+}
+h1 {
+    font-size: 2.2rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+
+    @include media-query(tablet) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    @include media-query(mobile) {
+        font-size: 1.7rem;
+        line-height: 2.2rem;
+    }
+}
+h2 {
+    font-size: 2rem;
+    line-height: 2.2rem;
+    font-weight: 700;
+
+    @include media-query(tablet) {
+        font-size: 1.8rem;
+        line-height: 2rem;
+    }
+    @include media-query(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
+}
+h3 {
+    font-size: 1.4rem;
+    line-height: 2.0rem;
+    font-weight: 700;
+
+    @include media-query(tablet) {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+    @include media-query(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+}
+p {
+    font-family: $font-body;
+    font-size: 1rem;
+    line-height: 1.7rem;
+    color: $color-neutral-primary;
+    
+    @include media-query(tablet){
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+    }
+    @include media-query(mobile){
+        font-size: 0.875rem;
+        line-height: 1.3rem;
+    }
+}
+a {
+    text-decoration: none;
+    font-family: $font-body;
+    font-size: 0.875rem;
+}
+i {
+    font-size: 2rem;
+    margin-right: 20px;
+    color: $color-neutral-primary;
+
+    &:hover {
+        color: $color-cta-bg1;
+    }
+}

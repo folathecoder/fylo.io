@@ -341,7 +341,7 @@ main {
 
 @media screen and (max-width: 992px) {
   .hero2_content {
-    padding: 20px 20px;
+    padding: 20px 20px 100px 20px;
   }
 }
 
@@ -350,15 +350,21 @@ main {
 }
 
 .hero2_content a {
-  color: #339ecc;
+  color: #65e2d9;
   line-height: 40px;
   padding-bottom: 5px;
-  border-bottom: 2px solid #339ecc;
+  border-bottom: 2px solid #65e2d9;
 }
 
 .hero2_content a:hover {
-  color: #65e2d9;
-  border-color: #65e2d9;
+  color: white;
+  border-color: white;
+}
+
+.hero2_content a .hero2_icon {
+  position: absolute;
+  -webkit-transform: translate(4px, 2px);
+          transform: translate(4px, 2px);
 }
 
 .testimonial-container {

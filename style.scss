@@ -1,128 +1,10 @@
-//Media Queries
+@import'media-queries';
+@import 'typography';
+@import 'colors';
+@import 'font';
+@import 'base';
 
-@mixin media-query ($size) {
-
-    @if $size == tablet {
-        @media screen and (max-width: 992px) {
-            @content;
-        }
-    }
-    @if $size == mini-tablet {
-        @media screen and (max-width: 700px) {
-            @content;
-        }
-    }
-    @if $size == mobile {
-        @media screen and (max-width: 556px) {
-            @content;
-        }
-    }
-} 
-
-//font family
-
-$font-heading: 'Raleway', sans-serif;
-$font-body: 'Open Sans', sans-serif;
-
-//colors 
-
-//Primary Colors
-
-$color-intro-email: hsl(217, 28%, 15%);
-$color-main-background: hsl(218, 28%, 13%);
-$color-footer-bg: hsl(216, 53%, 9%);
-$color-testimonial-bg: hsl(219, 30%, 18%);
-
-//Accent Colors
-
-$color-cta-bg1: hsl(176, 68%, 64%);
-$color-cta-bg2: hsl(198, 60%, 50%);
-$color-error: hsl(0, 100%, 63%);
-
-//Neutral Color
-
-$color-neutral-primary: hsl(0, 0%, 100%);
-
-//Typography 
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: $font-heading;
-    color: $color-neutral-primary;
-}
-h1 {
-    font-size: 2.2rem;
-    line-height: 2.5rem;
-    font-weight: 700;
-
-    @include media-query(tablet) {
-        font-size: 2rem;
-        line-height: 2.5rem;
-    }
-    @include media-query(mobile) {
-        font-size: 1.7rem;
-        line-height: 2.2rem;
-    }
-}
-h2 {
-    font-size: 2rem;
-    line-height: 2.2rem;
-    font-weight: 700;
-
-    @include media-query(tablet) {
-        font-size: 1.8rem;
-        line-height: 2rem;
-    }
-    @include media-query(mobile) {
-        font-size: 1.4rem;
-        line-height: 1.8rem;
-    }
-}
-h3 {
-    font-size: 1.4rem;
-    line-height: 2.0rem;
-    font-weight: 700;
-
-    @include media-query(tablet) {
-        font-size: 1.2rem;
-        line-height: 1.5rem;
-    }
-    @include media-query(mobile) {
-        font-size: 1.2rem;
-        line-height: 1.5rem;
-    }
-}
-p {
-    font-family: $font-body;
-    font-size: 1rem;
-    line-height: 1.7rem;
-    color: $color-neutral-primary;
-    
-    @include media-query(tablet){
-        font-size: 0.9rem;
-        line-height: 1.5rem;
-    }
-    @include media-query(mobile){
-        font-size: 0.875rem;
-        line-height: 1.3rem;
-    }
-}
-a {
-    text-decoration: none;
-    font-family: $font-body;
-    font-size: 0.875rem;
-}
-i {
-    font-size: 2rem;
-    margin-right: 20px;
-    color: $color-neutral-primary;
-
-    &:hover {
-        color: $color-cta-bg1;
-    }
-}
-
-// Genereal Component 
-
+// General Component 
 .btn {
     background-color: $color-cta-bg2;
     padding: 15px 100px;
@@ -133,17 +15,6 @@ i {
         background-color: $color-cta-bg1;
     }
 }
-
-//Base styling 
-
-html {
-    height: 100vh;
-}
-body {
-    position: relative;
-    background-color: $color-main-background;
-}
-
 
 //header styling
 
@@ -302,29 +173,30 @@ main {
         padding: 20px 50px;
 
         @include media-query(tablet) {
-            padding: 20px 20px;
+            padding: 20px 20px 100px 20px;
         }
 
         p:first-of-type {
             padding: 20px 0px;
         }
         a {
-            color: $color-cta-bg2;
+            color: $color-cta-bg1;
             line-height: 40px;
             padding-bottom: 5px;
-            border-bottom: 2px solid $color-cta-bg2;
+            border-bottom: 2px solid $color-cta-bg1;
 
             &:hover {
-                color: $color-cta-bg1;
-                border-color: $color-cta-bg1;
+                color: $color-neutral-primary;
+                border-color: $color-neutral-primary;
             }
 
+            .hero2_icon {
+                position: absolute;
+                transform: translate(4px, 2px);
+            }
         }
     }
-
-
 }
-
 .testimonial-container {
     max-width: 100%;
     min-height: 10px;
@@ -348,7 +220,6 @@ main {
     background-image: url(images/bg-quotes.png);
     background-repeat: no-repeat;
 }
-
 .testimonial {
 //    width: 320px;
     min-height: 100px;
@@ -382,8 +253,6 @@ main {
         padding: 10px 0px 0px 0px;
     }
 }
-
-
 .testimonial {
     &_image {
         flex: 1;
@@ -589,16 +458,11 @@ footer {
         }
     }
 }
-
-
-
-
 .attribution {
     font-size: 11px;
     text-align: center;
     padding: 0px 10px;
 }
-
 .attribution a {
     color: hsl(228, 45%, 44%);
 } 

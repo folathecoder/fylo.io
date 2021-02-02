@@ -1,0 +1,20 @@
+//Media Queries
+
+@mixin media-query ($size) {
+
+    @if $size == tablet {
+        @media screen and (max-width: 992px) {
+            @content;
+        }
+    }
+    @if $size == mini-tablet {
+        @media screen and (max-width: 700px) {
+            @content;
+        }
+    }
+    @if $size == mobile {
+        @media screen and (max-width: 556px) {
+            @content;
+        }
+    }
+} 
