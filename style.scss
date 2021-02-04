@@ -1,8 +1,6 @@
-@import'media-queries';
-@import 'typography';
-@import 'colors';
-@import 'font';
-@import 'base';
+@import'styler/media-queries';
+@import 'styler/typography';
+@import 'styler/base';
 
 // General Component 
 .btn {
@@ -392,8 +390,11 @@ footer {
         flex: 3 1;
         // background-color: red;
         display: flex;
-
+        
         @include media-query(tablet) {
+            flex: 2 1 1600px;
+        }
+        @include media-query(mobile) {
             flex: 2 1 600px;
         }
 
@@ -423,9 +424,9 @@ footer {
             margin-top: 20px;
 
             img {
-                width: 26px;
+                width: 20px;
                 height: auto;
-                margin: 5px 10px 0px 0px;
+                margin: 0px 10px 0px 0px;
             }
         }
     }
@@ -450,8 +451,10 @@ footer {
 
     &_part5 {
         flex: 2 1;
-        // background-color: rgb(173, 158, 70);
         text-align: center;
+        @include media-query(tablet) {
+            flex: 1 1;
+        }
         @include media-query(mobile) {
             flex: 1 1 300px;
             text-align: left;

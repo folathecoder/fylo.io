@@ -1,5 +1,26 @@
-//Typography 
+$font-heading: 'Raleway', sans-serif;
+$font-body: 'Open Sans', sans-serif;
 
+//colors 
+
+//Primary Colors
+
+$color-intro-email: hsl(217, 28%, 15%);
+$color-main-background: hsl(218, 28%, 13%);
+$color-footer-bg: hsl(216, 53%, 9%);
+$color-testimonial-bg: hsl(219, 30%, 18%);
+
+//Accent Colors
+
+$color-cta-bg1: hsl(176, 68%, 64%);
+$color-cta-bg2: hsl(198, 60%, 50%);
+$color-error: hsl(0, 100%, 63%);
+
+//Neutral Color
+
+$color-neutral-primary: hsl(0, 0%, 100%);
+
+//Typography 
 h1, h2, h3, h4, h5, h6 {
     font-family: $font-heading;
     color: $color-neutral-primary;
@@ -68,7 +89,7 @@ a {
 }
 i {
     font-size: 2rem;
-    margin-right: 20px;
+    margin: 0px 15px 15px 0px; 
     color: $color-neutral-primary;
 
     &:hover {
