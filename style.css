@@ -651,7 +651,9 @@ footer {
 }
 
 .foot_part2 .telephone img {
-  margin-right: 10px;
+  width: 15px;
+  height: 17px;
+  margin: 5px 10px 0px 0px;
 }
 
 .foot_part2 .email {
@@ -663,8 +665,8 @@ footer {
 
 .foot_part2 .email img {
   width: 20px;
-  height: auto;
-  margin: 0px 10px 0px 0px;
+  height: 17px;
+  margin: 5px 10px 0px 0px;
 }
 
 .foot_part3, .foot_part4 {
